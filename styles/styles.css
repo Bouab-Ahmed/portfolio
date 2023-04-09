@@ -59,9 +59,9 @@ a {
 }
 
 header {
-  max-height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0 !important;
 }
 
@@ -623,9 +623,12 @@ section {
   header {
     padding: 0 !important;
   }
-
+  
   header .logo {
-    display: none;
+    position: relative;
+    left: 0;
+    top: 10px;
+    width: 120px;
   }
 
   .theme-btn {
@@ -687,11 +690,6 @@ section {
     padding-left: 0;
   }
 
-  .timeline {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
-
   .container {
     padding: 2rem 2.5rem !important;
   }
@@ -704,11 +702,6 @@ section {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
     margin-top: 1rem;
-  }
-
-  .blogs {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
   }
 
   .contact-content-con {
@@ -762,6 +755,15 @@ section {
     padding: 7rem 11rem;
   }
 
+  header .logo {
+    position: relative;
+    left: 0%;
+    top: 35px;
+    width: 130px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+
   .contact-content-con {
     flex-direction: column;
   }
@@ -793,6 +795,14 @@ section {
     margin-top: 6rem;
   }
 
+  header .logo {
+    position: relative;
+    left: 0%;
+    top: 35px;
+    width: 130px;
+    height: 90px;
+  }
+
   .portfolios {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -802,8 +812,17 @@ section {
   }
 }
 @media screen and (max-width: 660px) {
-  .blogs {
-    grid-template-columns: repeat(1, 1fr);
+  .container {
+    padding: 7rem 2rem;
+  }
+
+  header .logo {
+    position: relative;
+    left: 0;
+    top: 35px;
+    width: 130px;
+    height: 90px;
+    margin-bottom: 10px;
   }
 
   .portfolios {
@@ -831,6 +850,15 @@ section {
 @media screen and (max-width: 970px) {
   .container {
     padding: 7rem 6rem;
+  }
+
+  header .logo {
+    position: relative;
+    left: 0;
+    top: 35px;
+    width: 130px;
+    height: 90px;
+    margin-bottom: 10px;
   }
 
   .about-container .left-about {
@@ -867,6 +895,15 @@ section {
     padding: 7rem 3rem;
   }
 
+  header .logo {
+    position: relative;
+    left: 0;
+    top: 35px;
+    width: 130px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+
   .about-stats .progress-bars {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -875,9 +912,6 @@ section {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .timeline {
-    grid-template-columns: repeat(1, 1fr);
-  }
 
   .main-title h2 {
     font-size: 3rem;
