@@ -273,8 +273,10 @@
 					<div class="left-contact">
 						<h4>Contact me here</h4>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							In, laborum numquam? Quam excepturi perspiciatis quas quasi.
+							Hello! I'm always happy to connect and collaborate. If you have any questions, need further information,
+							or are
+							interested in working together, please don't hesitate to reach out to me. I'm looking forward to hearing
+							from you!
 						</p>
 						<div class="contact-info">
 							<div class="contact-item">
@@ -283,7 +285,7 @@
 									<span>Location</span>
 								</div>
 								<p>
-									: London, united Kingdom
+									: El bayadh, Algeria
 								</p>
 							</div>
 							<div class="contact-item">
@@ -292,7 +294,7 @@
 									<span>Email</span>
 								</div>
 								<p>
-									<span>: maclinzuniversal@gmail.com</span>
+									<span>: bouab.ahmed757@gmail.com</span>
 								</p>
 							</div>
 							<div class="contact-item">
@@ -301,7 +303,7 @@
 									<span>Education</span>
 								</div>
 								<p>
-									<span>: Sussex University, East Sussex</span>
+									<span>: USTHB</span>
 								</p>
 							</div>
 							<div class="contact-item">
@@ -310,7 +312,7 @@
 									<span>Mobile Number</span>
 								</div>
 								<p>
-									<span>: 07522670617</span>
+									<span>: 0781616257</span>
 								</p>
 							</div>
 							<div class="contact-item">
@@ -319,23 +321,20 @@
 									<span>Languages</span>
 								</div>
 								<p>
-									<span>: Afrikaans, English, Spanish</span>
+									<span>: Arabic, English, French</span>
 								</p>
 							</div>
 						</div>
 						<div class="contact-icons">
 							<div class="contact-icon">
-								<a href="www.facebook.com" target="_blank">
-									<i class="fab fa-facebook-f"></i>
+								<a href="https://www.linkedin.com/in/ahmed-bouab/" target="_blank">
+									<i class="fab fa-linkedin-in"></i>
 								</a>
-								<a href="#" target="_blank">
-									<i class="fab fa-twitter"></i>
-								</a>
-								<a href="#" target="_blank">
+								<a href="https://github.com/Bouab-Ahmed" target="_blank">
 									<i class="fab fa-github"></i>
 								</a>
-								<a href="#" target="_blank">
-									<i class="fab fa-youtube"></i>
+								<a href="https://www.instagram.com/bouab_ahmed_/" target="_blank">
+									<i class="fab fa-instagram"></i>
 								</a>
 							</div>
 						</div>
@@ -352,11 +351,13 @@
 							<div class="input-control">
 								<textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
 							</div>
-							<div class="submit-btn">
-								<a href="#" class="main-btn">
-									<span class="btn-text">Download CV</span>
-									<span class="btn-icon"><i class="fas fa-download"></i></span>
-								</a>
+							<div class="btn-con">
+								<button type="submit" onclick="window.open('./CV.pdf')">
+									<a href="" class="main-btn">
+										<span class="btn-text">Download CV</span>
+										<span class="btn-icon"><i class="fas fa-download"></i></span>
+									</a>
+								</button>
 							</div>
 						</form>
 					</div>
@@ -383,7 +384,21 @@
 	<div class="theme-btn">
 		<i class="fas fa-adjust"></i>
 	</div>
-	<script src="app.js"></script>
+	<script>
+		(function () {
+			[...document.querySelectorAll('.control')].forEach((button) => {
+				button.addEventListener('click', function () {
+					document.querySelector('.active-btn').classList.remove('active-btn');
+					this.classList.add('active-btn');
+					document.querySelector('.active').classList.remove('active');
+					document.getElementById(button.dataset.id).classList.add('active');
+				});
+			});
+			document.querySelector('.theme-btn').addEventListener('click', () => {
+				document.body.classList.toggle('light-mode');
+			});
+		})();
+	</script>
 </body>
 
 </html>
