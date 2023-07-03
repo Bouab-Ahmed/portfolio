@@ -362,6 +362,14 @@ section {
   transform: translateX(-50%);
 }
 
+.more_span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--color-grey-2);
+}
+
 .portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
